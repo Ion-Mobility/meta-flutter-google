@@ -21,6 +21,8 @@ DEPENDS += "\
     curl-native \
     ninja-native \
     unzip-native \
+    perl-native \
+    libmodule-build-perl-native \
     "
 
 RDEPENDS:${PN} += "\
@@ -31,8 +33,9 @@ RDEPENDS:${PN} += "\
     gtk+3 \
     pango \
     perl \
-    perl-modules \
     unzip \
+    perl \
+    perl-module-base \
     "
 
 require conf/include/flutter-version.inc
