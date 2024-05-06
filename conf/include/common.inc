@@ -58,6 +58,7 @@ def run_command(d, cmd, cwd, env):
 
     bb.note('Running [%s] in %s' % (cmd, cwd))
     (retval, output) = getstatusoutput(cmd, cwd, env)
+    bb.note('output %s' % output)
     if retval:
         sys.exit("failed %s (cmd was %s)%s" % (retval, cmd, ":\n%s" % output if output else ""))
 
