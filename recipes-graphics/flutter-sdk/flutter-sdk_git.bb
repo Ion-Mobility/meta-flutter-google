@@ -21,6 +21,8 @@ DEPENDS += "\
     curl-native \
     ninja-native \
     unzip-native \
+    perl-native \
+    libmodule-build-perl-native \
     "
 
 RDEPENDS:${PN} += "\
@@ -31,7 +33,7 @@ RDEPENDS:${PN} += "\
     gtk+3 \
     pango \
     perl \
-    perl-modules \
+    perl-module-base \
     unzip \
     "
 
