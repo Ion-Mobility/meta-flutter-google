@@ -26,7 +26,6 @@ DEPENDS += "\
 RDEPENDS:${PN} += "\
     flutter-engine \
     fontconfig \
-    xkeyboard-config \
     "
 
 RRECOMMENDS:${PN} += "\
@@ -45,7 +44,7 @@ S = "${WORKDIR}/git"
 
 inherit pkgconfig cmake features_check
 
-PACKAGECONFIG ??= "text_input raw_keyboard gstreamer"
+PACKAGECONFIG ??= "gstreamer"
 
 PACKAGECONFIG[text_input]   = "-DBUILD_TEXT_INPUT_PLUGIN=ON,             -DBUILD_TEXT_INPUT_PLUGIN=OFF, libinput libxkbcommon"
 PACKAGECONFIG[raw_keyboard] = "-DBUILD_RAW_KEYBOARD_PLUGIN=ON,           -DBUILD_RAW_KEYBOARD_PLUGIN=OFF, libinput libxkbcommon"
